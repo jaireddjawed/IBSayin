@@ -59,21 +59,6 @@ Template.posts.helpers({
     }
 });
 
-Template.addPost.onRendered(function(){
-    $(".post").validate({
-          rules:{
-              quote:{
-                  required: true
-              }
-          },
-          messages:{
-              quote:{
-                  required: 'You must add text to your post.'
-              }
-          }
-    });
-});
-
 Template.posts.onCreated(function(){
    this.subscribe("posts"); 
 });
