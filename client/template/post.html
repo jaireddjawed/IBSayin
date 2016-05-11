@@ -1,0 +1,30 @@
+<template name="post">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    {{ > navbar }}
+    <ul class="posts">
+    {{#if Template.subscriptionsReady}}  
+        <hr>
+        <div class="row">
+            <li class="user-header"><a href="/profile/{{ createdBy }}"><img id="picture-profile-post" src="{{ picture }}" /></a></li>
+            <li class="user-header"><a href="/profile/{{ createdBy }}" id="user-name"> {{ userName }}</a></li>
+            
+            <div id="text-div">
+              <li><a href="/post/{{_id}}" id="text-individual" >{{ text }}</a></li>
+            </div>
+            {{#if hasImage}}
+              <li><a href="/post/{{_id}}"><img class="image-post" src="{{ image }}" /></a></li>
+            {{/if}}
+            {{#if hasVideo}}
+              <video width="320" height="240" controls class="image-post">
+                <source src="{{image}}" >
+                 Your browser does not support the video tag.
+              </video>
+            {{/if}}
+            <li>{{ date }}</li>
+        </div>
+    {{else}}
+      <img src="ajax-loader.gif" class="loading-wheel" />
+    {{/if}}
+    </ul>
+  {{ > footer }}
+</template>

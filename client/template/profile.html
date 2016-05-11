@@ -1,0 +1,39 @@
+<template name="profile">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    {{ > navbar }}
+  <div class="container">
+    <h1 id="profile-name">{{ profile.name }}</h1>
+    <img id="profile-picture" src="{{ profile.picture }}"/>
+    {{#if profile.hasBio}}
+    <p id="posts-bio">{{ profile.bio }}</p>
+    {{/if}}
+    {{#if posts.count}}
+      <h1 id="posts-title">Posts</h1>
+    {{/if}}
+    <ul class="posts">
+    {{#if Template.subscriptionsReady}}  
+      {{ #each posts }}
+        <hr>
+        <div class="row">
+            <div id="text-div">
+              <li><a href="/post/{{_id}}" class="text" >{{ text }}</a></li>
+            </div>
+            {{#if hasImage}}
+              <li><a href="/post/{{_id}}"><img class="image-post" src="{{ image }}" /></a></li>
+            {{/if}}
+            {{#if hasVideo}}
+              <video width="320" height="240" controls class="image-post">
+                <source src="{{image}}" >
+                 Your browser does not support the video tag.
+              </video>
+            {{/if}}
+            <li>{{ date }}</li>
+        </div>
+      {{ /each }}
+    {{else}}
+      <img src="ajax-loader.gif" class="loading-wheel" />
+    {{/if}}
+    </ul>
+  </div>
+  {{ > footer }}
+</template>

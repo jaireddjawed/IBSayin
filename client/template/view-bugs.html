@@ -1,0 +1,12 @@
+<template name="viewBugs">
+    {{ > navbar }}
+    <div class="container">
+      
+        {{ #each bugs }}
+            <p>{{description}}</p>
+        {{ /each }}
+      
+    </div>
+    
+    {{ > footer }}
+</template>

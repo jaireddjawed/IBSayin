@@ -1,0 +1,15 @@
+<template name="chat">
+  <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  {{ > navbar }}
+  <div class="container">
+    <h1>Chat</h1>
+    <h3>Create Room</h3>
+      <p>Invite People</p>
+      {{#each users}}
+          <a href="#" id="{{_id}}" class="add-profile-name">{{ profile.name }}</a>
+      {{/each}}
+      <hr>
+      <button name="create" id="create" class="btn btn-lg btn-success btn-block">Create</button>
+  </div>
+  {{ > footer }}
+</template>

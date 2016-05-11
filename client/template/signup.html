@@ -1,0 +1,33 @@
+<template name="signup">
+    {{ > navbar }}
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <div class="container">
+        <form name="signup" class="signup">
+            <div class="form-group">
+                <p class="form-text">Name</p>
+                <input type="name" id="name" name="name" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <p class="form-text">Email</p>
+                <input type="email" id="email" name="email" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <p class="form-text">Password</p>
+                <input type="password" id="password" name="password" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <p class="form-text">LHS Class Of</p>
+                <input type="number" min="2012" max="2018" id="class" name="class" class="form-control" placeholder = "2016 rules!" required/>
+            </div>
+            <hr>
+            <div class="form-group">
+                <button type="submit" name="submit" id="submit" class="btn btn-lg btn-default btn-block" data-loading-text = "Signing You Up...">Submit</button>
+            </div>
+
+            <div class="form-group">
+                <button type="reset" class="btn btn-lg btn-default btn-block">Reset</button>
+            </div>
+        </form>
+    </div>
+  {{ > footer }}
+</template>
