@@ -32,13 +32,13 @@ PublicRouter.route('/login', {
     BlazeLayout.render('App', { children: 'Login' }),
 });
 
-FlowRouter.route('/#/recover-password', {
+FlowRouter.route('/recover-password', {
   name: 'Recover_Password',
   action: () =>
     BlazeLayout.render('App', { children: 'Recover_Password' }),
 });
 
-FlowRouter.route('/#/reset-password/:token', {
+FlowRouter.route('/reset-password/:token', {
   name: 'Reset_Password',
   action: ({ token }) => {
     Session.set('token', token);
@@ -46,7 +46,7 @@ FlowRouter.route('/#/reset-password/:token', {
   },
 });
 
-FlowRouter.route('/#/verify-email/:token', {
+FlowRouter.route('/verify-email/:token', {
   name: 'Verify_Email',
   action: ({ token }) => {
     Accounts.verifyEmail(token, (error) => {
