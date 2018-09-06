@@ -11,10 +11,12 @@ Template.Profile.onCreated(function() {
 
 Template.Profile.helpers({
   userFullName() {
-    return Meteor.user().profile.name;
+    const userId = Session.get('userId');
+    return Meteor.users.findOne(userId).profile.name;
   },
   userProfilePicture() {
-    return Meteor.user().profile.picture;
+    const userId = Session.get('userId');
+    return Meteor.users.findOne(userId).profile.picture;
   },
   posts() {
     return Posts.find({}, { sort: { date: - 1 } });
