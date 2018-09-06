@@ -1,22 +1,5 @@
+<h1>IBSayin'</h1>
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+<p>IBSayin' is the first Meteor App I've created. It's a simple app where you can post quotes and images. You can also view the posts of others.</p>
 
-
-Welcome to your Meteor project on Cloud9 IDE!
-
-To run your new app open your terminal and type:
-   
-    $ meteor --port $IP:$PORT
-
-
-Happy coding!
-The Cloud9 IDE team
-
-## Support & Documentation
-
-Meteor documentation can be found at http://docs.meteor.com/
+<p>Last Edited - May 2016</p>

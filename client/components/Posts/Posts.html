@@ -1,0 +1,16 @@
+<template name="Posts">
+  {{#if Template.subscriptionsReady}}
+    <ul class="posts">
+      {{#each posts}}
+        {{ > Post }}
+      {{/each}}
+    </ul>
+    <div class="form-group">
+      <button name="load-more" class="btn btn-primary btn-block">
+        Load More
+      </button>
+    </div>
+  {{else}}
+    {{ > Loading }}
+  {{/if}}
+</template>

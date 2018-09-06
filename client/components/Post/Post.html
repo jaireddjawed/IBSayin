@@ -1,0 +1,18 @@
+<template name="Post">
+  <li class="post">
+    <div class="form-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <a href="/profile/{{createdBy}}">{{userFullName createdBy}}</a>
+          <span class="pull-right">{{formatDate date}}</span>
+        </div>
+        <div class="panel-body">
+          <p>{{text}}</p>
+          {{#if image}}
+            <img src="{{image}}" class="post-image" />
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </li>
+</template>

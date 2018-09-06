@@ -1,0 +1,78 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  font-family: 'Open Sans';
+  margin-bottom: 80px;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.error {
+  color: red;
+  font-style: italic;
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+.navbar-brand {
+  font-family: "Shadows Into Light";
+}
+
+.jumbotron {
+  background: url(ib.png) center center no-repeat;
+}
+
+.jumbotron h1 {
+  font-family: "Shadows Into Light";
+  color: white;
+  text-shadow: 2px 2px 2px blue;
+}
+
+.jumbotron .lead {
+  color: white;
+}
+
+.lead {
+  text-shadow: 1px 1px 1px blue;
+}
+
+.panel .panel-heading a {
+  color: white;
+}
+
+.posts li {
+  list-style-type: none;
+}
+
+.posts .post .post-image {
+  max-height: 300px;
+}
+
+.user-profile-picture {
+  max-height: 150px;
+  border-radius: 220px;
+}

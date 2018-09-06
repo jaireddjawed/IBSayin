@@ -1,0 +1,22 @@
+<template name="Profile">
+  <h3 class="page-header">Profile</h3>
+  {{#if Template.subscriptionsReady}}
+    <div class="form-group text-center">
+      <h4>{{ userFullName }}</h4>
+      <img src="{{ userProfilePicture }}" class="user-profile-picture" />
+    </div>
+    <h4 class="page-header">Posts</h4>
+    <ul class="posts">
+      {{#each posts}}
+        {{ > Post }}
+      {{/each}}
+    </ul>
+    <div class="form-group">
+      <button name="load-more" class="btn btn-primary btn-block">
+        Load More
+      </button>
+    </div>
+  {{else}}
+    {{ > Loading }}
+  {{/if}}
+</template>
