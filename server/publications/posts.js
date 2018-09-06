@@ -24,8 +24,15 @@ Meteor.publish('postsByUser', function(userId, limit) {
   check(userId, String);
   check(limit, Number);
 
-  return Posts.find({ createdBy: userId }, {
-    limit,
-    sort: { date: -1 },
-  });
+  return [
+    Posts.find({ createdBy: userId }, {
+      limit,
+      sort: { date: -1 },
+    }),
+    Meteor.users.find(userId, {
+      fields: {
+        profile: 1,
+      },
+    }),
+  ];
 });
