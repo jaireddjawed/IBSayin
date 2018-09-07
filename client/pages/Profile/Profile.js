@@ -18,6 +18,10 @@ Template.Profile.helpers({
     const userId = Session.get('userId');
     return Meteor.users.findOne(userId).profile.picture;
   },
+  bio() {
+    const userId = Session.get('userId');
+    return Meteor.users.findOne(userId).profile.bio;
+  },
   posts() {
     return Posts.find({}, { sort: { date: - 1 } });
   },

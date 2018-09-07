@@ -4,8 +4,6 @@ Template.Post.helpers({
   },
   formatDate(createdAt) {
     const date = new Date(createdAt);
-    const formattedDate = `${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`;
-    const formattedTime = `${date.getHours()}:${date.getMinutes()}`;
-    return `${formattedDate} ${formattedTime}`;
+    return moment(date).format('MM/DD/YYYY HH:mm A');
   },
 });
