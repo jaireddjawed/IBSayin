@@ -4,6 +4,14 @@ Template.Post.helpers({
   },
   formatDate(createdAt) {
     const date = new Date(createdAt);
-    return moment(date).format('MM/DD/YYYY HH:mm A');
+    const options = {
+      weekday: 'long',
+      month: 'numeric',
+      day: 'numeric',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+    };
+    return date.toLocaleDateString('en-US', options);
   },
 });
